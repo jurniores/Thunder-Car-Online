@@ -1,0 +1,24 @@
+{
+    "name": "Omni.Core.Shared",
+    "rootNamespace": "",
+    "references": [
+        "Omni.Shared",
+        "Omni.Core",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.textmeshpro",
+            "expression": "",
+            "define": "OMNI_TEXTMESHPRO_ENABLED"
+        }
+    ],
+    "noEngineReferences": false
+}
