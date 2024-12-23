@@ -18,7 +18,7 @@ namespace NWH.VehiclePhysics2
         public MultiplayerState GetMultiplayerState()
         {
             _multiplayerState.lightState = effectsManager.lightsManager.GetIntState();
-            _multiplayerState.engineAngularVelocity = powertrain.engine.outputAngularVelocity;
+            //_multiplayerState.engineAngularVelocity = powertrain.engine.outputAngularVelocity;
 
             _multiplayerState.steering = input.states.steering;
             _multiplayerState.throttle = input.states.throttle;
@@ -70,7 +70,7 @@ namespace NWH.VehiclePhysics2
         public struct MultiplayerState
         {
             public int lightState;
-            public float engineAngularVelocity;
+            //public float engineAngularVelocity;
             public float steering;
             public float throttle;
             public float brakes;

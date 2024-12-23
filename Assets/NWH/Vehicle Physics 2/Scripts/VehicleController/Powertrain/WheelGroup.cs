@@ -238,7 +238,7 @@ namespace NWH.VehiclePhysics2.Powertrain.Wheel
                 {
                     // Apply the ARB force at the shock anchor point.
                     leftWheel.ParentRigidbody.AddForceAtPosition(leftWheel.transform.up * -_arbForce,
-                                                            leftWheel.transform.position);
+                                                             leftWheel.transform.position);
                     rightWheel.ParentRigidbody.AddForceAtPosition(rightWheel.transform.up * _arbForce,
                                                             rightWheel.transform.position);
                 }

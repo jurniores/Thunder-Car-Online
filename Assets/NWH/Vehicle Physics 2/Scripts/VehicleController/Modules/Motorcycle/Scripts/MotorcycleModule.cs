@@ -223,7 +223,7 @@ namespace NWH.VehiclePhysics2.Modules.MotorcycleModule
         public override void VC_FixedUpdate()
         {
             base.VC_FixedUpdate();
-
+            
             if (useHitNormalAsUp)
             {
                 _up = ((_frontWheel.wheelUAPI.IsGrounded ? _frontWheel.wheelUAPI.HitNormal : Vector3.up) +

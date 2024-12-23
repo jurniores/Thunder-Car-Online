@@ -37,7 +37,7 @@ namespace Omni.Core
 			return d_UniqueId++;
 		}
 
-		internal static void Destroy(int identityId, bool isServer)
+		public static void Destroy(int identityId, bool isServer)
 		{
 			var identities = isServer
 				? NetworkManager.Server.Identities

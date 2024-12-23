@@ -249,6 +249,7 @@ MonoBehaviour:
     prevLength: 0
     compressionVelocity: 0
     prevVelocity: 0
+  bot: 0
   damper:
     bumpRate: 4200
     reboundRate: 4600
@@ -1251,6 +1252,7 @@ MonoBehaviour:
     prevLength: 0
     compressionVelocity: 0
     prevVelocity: 0
+  bot: 0
   damper:
     bumpRate: 4200
     reboundRate: 4600
@@ -2355,6 +2357,7 @@ MonoBehaviour:
     prevLength: 0
     compressionVelocity: 0
     prevVelocity: 0
+  bot: 0
   damper:
     bumpRate: 2400
     reboundRate: 2400
@@ -3229,6 +3232,7 @@ MonoBehaviour:
     prevLength: 0
     compressionVelocity: 0
     prevVelocity: 0
+  bot: 0
   damper:
     bumpRate: 2400
     reboundRate: 2400
@@ -3677,17 +3681,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b84f7c44954b35841bc58e1dd0677db5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 76.56718
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b84f7c44954b35841bc58e1dd0677db5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7
+      value: -7.08
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b84f7c44954b35841bc58e1dd0677db5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 76.60386
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b84f7c44954b35841bc58e1dd0677db5,
         type: 3}
@@ -5106,7 +5110,6 @@ MonoBehaviour:
   components: []
   lastState:
     lightState: 0
-    engineAngularVelocity: 0
     steering: 0
     throttle: 0
     brakes: 0
@@ -5121,8 +5124,9 @@ MonoBehaviour:
     cruiseControl: 0
     boost: 0
     flipOver: 0
-  vel: 0.5
-  velRot: 0.5
+  vel: 0.8
+  velRot: 0.8
+  sendTick: 0
 --- !u!1 &3403393590475835832 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 623922693060019038, guid: b84f7c44954b35841bc58e1dd0677db5,

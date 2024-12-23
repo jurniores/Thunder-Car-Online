@@ -1,21 +1,35 @@
 using System.Collections.Generic;
 using Omni.Core;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Carrossel : ServiceBehaviour
 {
     [Header("Configurações")]
     public float rotationSpeed = 5f; // Velocidade de rotação
     public List<Transform> items; // Lista de objetos no carrossel
+    [SerializeField]
+    private Button button;
 
     public int currentIndex = 0; // Índice do item atualmente focado
     private bool isRotating = false; // Controla se está no meio de uma rotação
     private Quaternion targetRotation; // Rotação alvo do carrossel
-    
+
+    protected override void OnStart()
+    {
+        button.onClick.AddListener(() => NetworkService.Get<SpawnClient>().SetCar(currentIndex));
+         
+         
+        foreach (var car in NetworkManager.Client.Identities)
+        {
+            print("key " + car.Key + " Value " + car.Value);
+        }
+    }
+
     public void Roleta(int i)
     {
+        if (currentIndex <= 0) currentIndex = 6;
         currentIndex = (currentIndex + i) % items.Count;
-        
         RotateToItem(currentIndex);
     }
     void Update()

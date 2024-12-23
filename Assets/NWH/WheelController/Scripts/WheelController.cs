@@ -18,7 +18,7 @@ namespace NWH.WheelController3D
         [Tooltip("    Instance of the spring.")]
         [SerializeField]
         public Spring spring = new Spring();
-
+        public bool bot = false;
         [Tooltip("    Instance of the damper.")]
         [SerializeField]
         public Damper damper = new Damper();
@@ -351,7 +351,7 @@ namespace NWH.WheelController3D
         public override void Step()
         {
             if (!_initialized || !isActiveAndEnabled) return;
-
+            
             // Cache values
             _dt = Time.fixedDeltaTime;
 
@@ -832,7 +832,10 @@ namespace NWH.WheelController3D
                 forcePosition.x = wheelHit.point.x + _transformUp.x * forceApplicationPointDistance * spring.maxLength;
                 forcePosition.y = wheelHit.point.y + _transformUp.y * forceApplicationPointDistance * spring.maxLength;
                 forcePosition.z = wheelHit.point.z + _transformUp.z * forceApplicationPointDistance * spring.maxLength;
+
+                //Força para movimentação do carro
                 targetRigidbody.AddForceAtPosition(_frictionForce, forcePosition);
+                
             }
             else
             {
